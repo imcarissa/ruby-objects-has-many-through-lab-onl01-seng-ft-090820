@@ -20,12 +20,12 @@ class Doctor
   def new_appointment(date, patient)
     appointment = Appointment.new(date)
     appointment.patient = patient
-    
-    
+    appointment.doctor = self
+    appointment
   end
   
   def patients
-    
+    self.appointments.map { |a| a.
   end
   
 end
